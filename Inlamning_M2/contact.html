@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<title>Contact</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/myCustom.css">
+	<script src="javascript/myCustomJs.js"></script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="london.html">London</a>
+    <a href="paris.html">Paris</a>
+    <a href="#tokyo">Tokyo</a>
+    <a href="cities.html">Cities Bucketlist</a>
+    <a href="contact.html"  class="active">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<div class="w3-container w3-yellow">
+  <h1>Survey</h1> 
+  <p>Whats your favourite City?</p> 
+</div>
+
+<br>
+<div class="w3-row-padding">
+    <div class="w3-third" id="formQuestion1">
+        <form method="get">
+            <fieldset>
+                <legend>Contact details</legend>
+                <label for="ForNamnID">First name:</label>
+                <br>
+                <input type="text" id ="ForNamnID" name="ForNamn">
+                <br>
+                <label for="EfterNamnID">Surname</label>
+                <br>
+                <input type="text" id ="EfterNamnID" name="EfterNamn">
+                <br>
+                <label for="EmailID">Email:</label>
+                <br>
+                <input type="email" id ="EmailID" name="Email">
+            </fieldset>
+            <br>
+            <fieldset>
+                Whats your next travel destination?:
+                <br>
+                <textarea rows="7" cols="40" id="TextAreaID" name="TextArea"></textarea>
+            </fieldset>
+                <br>
+            <fieldset>
+                <legend>Favourite City?</legend>
+                <input type="radio" id ="London" name="FavStad" value="London">
+                <label for="London"> London</label>
+                <br>
+                <input type="radio" id ="Paris" name="FavStad" value="Paris">
+                <label for="Paris"> Paris</label>
+                <br>
+                <input type="radio" id ="Tokyo" name="FavStad" value="Tokyo">
+                <label for="Tokyo"> Tokyo</label>
+                <br>
+                <input type="radio" id ="Other" name="FavStad" value="Other">
+                <label for="Other"> Other</label>
+                <br>
+            </fieldset>
+                <br>
+                <input type="submit" name="Send" id="SendID" value="Send">
+        </form>
+    </div>
+</div>
+<br>
+
+<div class="w3-container w3-yellow">
+    <a href="contact.html"><p>Contact</p></a>
+</div>
+
+</body>
+</html>

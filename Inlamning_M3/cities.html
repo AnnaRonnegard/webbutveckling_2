@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<title>Cities</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/myCustom.css">
+    <link rel="stylesheet" href="CSS/cities.css">
+	<script src="javascript/myCustomJs.js"></script>
+    <script src="javascript/cities.js"></script> <!--Länk till javascript med mina funktioner-->
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="london.html">London</a>
+        <a href="paris.html">Paris</a>
+        <a href="#tokyo">Tokyo</a>
+        <a href="cities.html " class="active">Cities Bucketlist</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="w3-container w3-yellow">
+        <h1>Survey</h1> 
+        <p>Whats your favourite City?</p> 
+      </div>
+    <div class="w3-row-padding">
+        <div class="w3-third" id="formQuestion1">
+            <form method="get">
+                <br>
+                <fieldset>
+                    <legend>My cities</legend>
+                    <label for="AddCityId">City:</label>
+                    <br>
+                    <input type="text" id ="AddCityId" name="AddCity">  <!--Ett textinput där man läser in städerna-->
+                    <button type="button" id="AddButtonId" onclick="addCity();">Add City</button>  <!--En knapp som anropar funktionen addCity()-->
+                    <br>
+                    <br>
+                    Cities:
+                    <div style="margin-left: 20px;"> <!--En div som sätter an marginal på textfälten, enligt mallen-->
+                        <textarea rows="1" cols="21" id="CityId0" class="noResize" disabled></textarea> <!--En textarea som kommer att innehålla en adderad stad-->
+                        <br>
+                        <textarea rows="1" cols="21" id="CityId1" class="noResize" disabled></textarea> <!--En textarea som kommer att innehålla en adderad stad-->
+                        <br>
+                        <textarea rows="1" cols="21" id="CityId2" class="noResize" disabled></textarea> <!--En textarea som kommer att innehålla en adderad stad-->
+                        <br>
+                        <textarea rows="1" cols="21" id="CityId3" class="noResize" disabled></textarea> <!--En textarea som kommer att innehålla en adderad stad-->               
+                        <br>
+                        <textarea rows="1" cols="21" id="CityId4" class="noResize" disabled></textarea> <!--En textarea som kommer att innehålla en adderad stad-->
+                    </div> <!--Slut "marginal-div"-->
+                    <br>
+                    <button type="button" id="SortButtonId" onclick="sortCities();">Sort</button> <!--En knapp som anropar funktionen sortCities()-->
+                    <input type="reset" id="ResetButtonId" value="Reset" onclick="resetFix();"> <!--En knapp som resettar och anropar funktionen resetFix()-->
+                </fieldset>
+            </form>
+            <br>
+        <p id="WriteTextId"></p> <!--En paragraf som kommer att innehålla informationstext om den adderade staden-->
+        </div>
+    </div>
+    <br>
+    <br>
+<div class="w3-container w3-yellow">
+    <a href="contact.html"><p>Contact</p></a>
+</div>
+</body>
+</html>contact.html
