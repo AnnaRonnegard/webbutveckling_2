@@ -63,7 +63,7 @@ function submitAllKeys()
 
 function submitAllValues() 
 {
-    const allElements = document.getElementById("nodes").children; //Skapar en lista med aktuella element(children returnerar alla element).
+    const allElements = document.getElementById("nodes").children; //Skapar en lista med aktuella element (children returnerar alla element).
     let sträng = "";
     for (let x of allElements) //Loopar igenom.
         {
@@ -79,34 +79,15 @@ function submitParagraphValues()
     let sträng = "";
     let textLista = []; //Skapar en lista, textLista, som kommer att innehålla alla noders text.
 
-    for(let i = 0; i < allaParagrafer.length; i++) //Loopar igenom paragraferna.
+    for (i = 0; i < allaParagrafer.length; i++) //Loopar igenom. 
     {
-        for(let j = 0; j < allaParagrafer[i].childNodes.length; j++) //Loopar igenom deras noder (childNodes returnerar en nod-lista).
-        {
-            textLista.push(allaParagrafer[i].childNodes[j].nodeValue); //Lägger in nodens text i textLista.
-        }
-    }
-
-    for (let a = 0 ; a < textLista.length; a++) //Loopar igenom textLista listan.
-    {
-        sträng += textLista[a] +"<br>"; //Skriver in texten i en sträng.
+        sträng += allaParagrafer[i].innerHTML + "<br>"; //Lägger in texten i en sträng.
     }
     document.getElementById("utskrift").innerHTML= sträng;
 }
 
-function  submitHeader4Value() 
+function  submitHeader4Value() //
 {
-    const allaH4 = document.querySelectorAll("#nodes h4"); //Söker rätt på alla aktuella h4-rubriker.
-    let sträng = "";
-    for (i = 0; i < allaH4.length; i++) //Loopar igenom. Det finns bara en. Om man vet att det bara är en kan man lika gärna använda nedanstående (bortkommenterade) funktion.
-        {
-        sträng += allaH4[i].innerHTML + "<br>"; //Lägger in texten i en sträng.
-    }
-    document.getElementById("utskrift").innerHTML=sträng;
+    const aktuellH4 = document.querySelector("#nodes h4"); //Söker rätt på aktuell h4-rubrik, det finns bara en.
+    document.getElementById("utskrift").innerHTML=aktuellH4.innerHTML;
 }
-
-// function  submitHeader4Value()
-// {
-//     const aktuellH4 = document.querySelector("#nodes h4"); //Söker rätt på aktuell h4-rubrik.
-//     document.getElementById("utskrift").innerHTML=aktuellH4.innerHTML;
-// }
