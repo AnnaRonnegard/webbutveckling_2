@@ -78,17 +78,17 @@ function submitParagraphValues()
 
     let sträng = "";
 
-    let textLista = []; //Skapar en lista, textLista, som kommer att innehålla alla noders text.
+    let textLista = []; //Skapar en lista, textLista, som kommer att innehålla alla noders innehåll.
 
     for(let i = 0; i < allaParagrafer.length; i++) //Loopar igenom divarna.
     {
         for(let j = 0; j < allaParagrafer[i].childNodes.length; j++) //Loopar igenom deras noder (childNodes returnerar en nod-lista).
         {
-            textLista.push(allaParagrafer[i].childNodes[j]); //Lägger in noden i textNodes listan.
+            textLista.push(allaParagrafer[i].childNodes[j]); //Lägger in noden i textLista listan.
         }
     }
 
-    for (let a = 0 ; a < textLista.length; a++) //Loopar igenom textNode listan.
+    for (let a = 0 ; a < textLista.length; a++) //Loopar igenom textLista listan.
     {
         sträng += textLista[a].nodeValue +"<br>"; //Skriver in texten med numrering i en sträng.
     }
