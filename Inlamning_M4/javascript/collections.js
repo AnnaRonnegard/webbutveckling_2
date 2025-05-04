@@ -78,9 +78,9 @@ function submitParagraphValues()
 
     let sträng = "";
 
-    let textLista = []; //Skapar en lista, textLista, som kommer att innehålla alla noders innehåll.
+    let textLista = []; //Skapar en lista, textLista, som kommer att innehålla nodernas innehåll.
 
-    for(let i = 0; i < allaParagrafer.length; i++) //Loopar igenom divarna.
+    for(let i = 0; i < allaParagrafer.length; i++) //Loopar igenom paragraferna.
     {
         for(let j = 0; j < allaParagrafer[i].childNodes.length; j++) //Loopar igenom deras noder (childNodes returnerar en nod-lista).
         {
