@@ -78,19 +78,19 @@ function submitParagraphValues()
 
     let sträng = "";
 
-    let textLista = []; //Skapar en lista, textLista, som kommer att innehålla nodernas innehåll.
+    let nodLista = []; //Skapar en lista, nodLista, som kommer att innehålla noder.
 
     for(let i = 0; i < allaParagrafer.length; i++) //Loopar igenom paragraferna.
     {
         for(let j = 0; j < allaParagrafer[i].childNodes.length; j++) //Loopar igenom deras noder (childNodes returnerar en nod-lista).
         {
-            textLista.push(allaParagrafer[i].childNodes[j]); //Lägger in noden i textLista listan.
+            nodLista.push(allaParagrafer[i].childNodes[j]); //Lägger in noden i nodLista listan.
         }
     }
 
-    for (let a = 0 ; a < textLista.length; a++) //Loopar igenom textLista listan.
+    for (let a = 0 ; a < nodLista.length; a++) //Loopar igenom nodLista listan.
     {
-        sträng += textLista[a].nodeValue +"<br>"; //Skriver in texten med numrering i en sträng.
+        sträng += nodLista[a].nodeValue +"<br>"; //Skriver in texten med numrering i en sträng.
     }
     
     document.getElementById("utskrift").innerHTML= sträng;
