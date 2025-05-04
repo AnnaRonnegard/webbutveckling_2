@@ -77,12 +77,22 @@ function submitParagraphValues()
     const allaParagrafer = document.querySelectorAll("#nodes p"); //Söker rätt på alla aktuella paragrafer.
 
     let sträng = "";
+
     let textLista = []; //Skapar en lista, textLista, som kommer att innehålla alla noders text.
 
-    for (i = 0; i < allaParagrafer.length; i++) //Loopar igenom. 
+    for(let i = 0; i < allaParagrafer.length; i++) //Loopar igenom divarna.
     {
-        sträng += allaParagrafer[i].innerHTML + "<br>"; //Lägger in texten i en sträng.
+        for(let j = 0; j < allaParagrafer[i].childNodes.length; j++) //Loopar igenom deras noder (childNodes returnerar en nod-lista).
+        {
+            textLista.push(allaParagrafer[i].childNodes[j]); //Lägger in noden i textNodes listan.
+        }
     }
+
+    for (let a = 0 ; a < textLista.length; a++) //Loopar igenom textNode listan.
+    {
+        sträng += textLista[a].nodeValue +"<br>"; //Skriver in texten med numrering i en sträng.
+    }
+    
     document.getElementById("utskrift").innerHTML= sträng;
 }
 
