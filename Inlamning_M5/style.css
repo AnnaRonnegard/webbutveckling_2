@@ -1,0 +1,87 @@
+body {
+    background-color: lightyellow;
+    color: rgb(20, 20, 200);
+    margin: 0%;
+    text-align: center;
+}
+
+img {
+    width: 140px;
+    height: 85px;
+    vertical-align: middle; /* Lägger bilden bra framför radio-knappen. */
+    margin: auto;
+}
+
+#kolumn1 {
+    float: left; /*Lägger kolumn1, dvs val delen, på vänstersida.*/
+    width: 43%;
+    margin-left: 7%;
+}
+
+#kolumn2 {
+    float: right; /*Lägger kolumn2, dvs resultat delen, brevid kolumn1. 
+                    PS. Det blir likadant med float-left, då de är på 50% var.*/
+    width: 43%;
+    margin-right: 7%;
+}
+
+#border_h1 {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#sendId {
+    font-size: 18px;
+    background-color: lightyellow;
+    border: 1px solid rgb(20, 20, 200) ;
+    color: rgb(20, 20, 200);
+}
+
+#spelaId {
+    font-size: 20px; /*Halv stor rubrik på "Spela?" som även ändras till "Spela igen? efter att man "kört"*/
+}
+
+#grattisSorryStorId {
+    font-size: 25px;
+}
+
+#utskriftHalvStorId {
+    font-size: 20px;
+}
+
+/*Nedanstående objekt döljs tills resultatet ska visas (de ligger på högersidan).*/
+
+#resetId {
+    font-size: 18px;
+    background-color: lightyellow;
+    border: 1px solid rgb(20, 20, 200) ;
+    color: rgb(20, 20, 200);
+    display: none;
+    margin: auto;
+}
+
+#stenId {
+    display: none;
+}
+
+#saxId {
+    display: none;
+}
+
+#påseId {
+    display: none;
+}
+
+#saxPaseId {
+    display: none;
+}
+
+#paseStenId {
+    display: none;
+}
+
+#saxStenId {
+    display: none;
+}

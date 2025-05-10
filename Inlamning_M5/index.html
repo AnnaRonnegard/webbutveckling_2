@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>StenSaxPase</title>
+</head>
+<body>
+    <h1 id="border_h1">Sten  Sax  Påse</h1>
+    <div id="kolumn1">  <!--Val delen, till vänster på hemsidan.-->
+        <p id="spelaId">Spela?</p>
+        <p>Välj något:</p>
+        <form> <!--Val formulär:-->
+            <input type="radio" id="sten" name="val" value="sten">
+            <label for="sten"><img src="Bilder/Sten.jpg" alt="sten"></label>
+            <br><br>
+            <input type="radio" id="sax" name="val" value="sax">
+            <label for="sax"><img src="Bilder/Sax.jpg" alt="sax"></label>
+            <br><br>
+            <input type="radio" id="pase" name="val" value="pase">
+            <label for="pase"><img src="Bilder/Pase.jpg" alt="pase"></label>
+            <br><br><br>
+            <button type="button" id="sendId" onclick="Spela()"> Kör </button>
+            <br>
+        </form>
+    </div>
+    <div id="kolumn2">   <!--Resultat delen, till höger på hemsidan.
+                            Allt förutom utskriften "Resultat" döljs vid start och reset. Utskrifterna och bilderna används lite olika berorende på utfall.-->
+        <p style="font-size: 20px;">Resultat</p>
+        <p id="grattisSorryStorId"></p>
+        <p id="utskriftHalvStorId"></p>
+        <p id="utskriftId"></p>
+        <img id="saxPaseId" src="Bilder/SaxPase.jpg" alt="saxpase">
+        <img id="paseStenId" src="Bilder/PaseSten.jpg" alt="pasesten">
+        <img id="saxStenId" src="Bilder/SaxSten.jpg" alt="saxsten">
+        <img id="stenId" src="Bilder/Sten.jpg" alt="sten">
+        <img id="saxId" src="Bilder/Sax.jpg" alt="sax">
+        <img id="påseId" src="Bilder/Pase.jpg" alt="pase">
+        <br>
+        <p id="summeringId"></p>
+        <br>
+        <button type="reset" id="resetId" onclick="Reset()">Reset</button>
+    </div>
+</body>
+</html>

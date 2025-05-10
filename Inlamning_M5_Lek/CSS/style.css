@@ -1,0 +1,80 @@
+body {
+    background-color: lightyellow;
+    color: rgb(20, 20, 200);
+    margin: 0%;
+    text-align: center;
+}
+
+img {
+    width: 140px;
+    height: 84px;
+    vertical-align: middle;
+    margin: auto;
+}
+
+a {   
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    align-content: center; 
+    border: 1px solid rgb(20, 20, 200) ; 
+    color: rgb(20, 20, 200);;
+    display: block;
+}
+
+#imgAllihopId {
+    width: 250px;
+    height: 160px;
+}
+
+#border_h1 {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#sendId {
+    font-size: 18px;
+    background-color: lightyellow;
+    border: 1px solid rgb(20, 20, 200) ;
+    color: rgb(20, 20, 200);
+}
+
+#grattisSorryStorId {
+    font-size: 40px;
+}
+
+#utskriftHalvStorId {
+    font-size: 20px;
+}
+
+#tillHogerId {
+    float: right;
+    margin-right: 15%;
+}
+
+#stenId {
+    display: none;
+}
+
+#saxId {
+    display: none;
+}
+
+#påseId {
+    display: none;
+}
+
+#saxPaseId {
+    display: none;
+}
+
+#paseStenId {
+    display: none;
+}
+
+#saxStenId {
+    display: none;
+}
