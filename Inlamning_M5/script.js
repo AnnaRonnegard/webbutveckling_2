@@ -30,7 +30,8 @@ function Spela() { //Huvudfunktion. De funktioner som används i den är definie
       return; //Avslutar isåfall funktionen.
     }
 
-    switch (val) { //Utfallen om de ej är lika. Det är sex stycken. De innehåller utskrift på resultat sidan, samt uppräkning av vinst och förlust variablerna. För att beskåda funktionerna som finns i switchen- se nedan.
+     //Utfallen om de ej är lika, det är sex stycken, behandlas i switchen. Den innehåller utskrift på resultat sidan, samt uppräkning av vinst och förlust variablerna. För att beskåda funktionerna som finns i switchen- se nedan.
+    switch (val) {
       case "sten":
         if (datorVal== "påse") {
           Sorry(datorVal);
@@ -78,7 +79,7 @@ function Spela() { //Huvudfunktion. De funktioner som används i den är definie
         }
         VinstForlustUtskrift();
         break;
-    default: { //Sker om inget var valt.
+    default: { //Sker om inget är valt.
           document.getElementById("utskriftHalvStorId").innerHTML="<br>Du får välja något!";
           document.getElementById("resetId").style.display="none";
         }
@@ -107,7 +108,7 @@ function VinstForlustUtskrift() { //Utskrifts funktion som även räknar ut om d
 }
    
 function SlumpVal() {
-    let slump =  Math.floor(Math.random()*3); //Slumpgeneratorn ".random" genererar tal från 0 upp till 1 (inte till och med 1). "floor" avrundar nedåt till närmaste heltal. Denna uträkning ger alltså ett tal med värdet 0, 1 eller 2.
+    let slump =  Math.floor(Math.random()*3); //Slumpgeneratorn "Math.random" genererar tal från 0 upp till 1 (inte till och med 1). "floor" avrundar nedåt till närmaste heltal. Denna uträkning ger alltså ett tal med värdet 0, 1 eller 2.
 
     //returnerar slump-valet.
     if (slump==0) {
