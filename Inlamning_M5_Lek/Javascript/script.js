@@ -1,4 +1,4 @@
-function Spela() {
+function Spela() {  //Huvudfunktion. De funktioner som används i den är definierade nedanför.
     
     const urlParams = new URLSearchParams(window.location.search); //Läser in webbläsar-strängen.
     const mittVal = urlParams.get("val"); //Läser in val-värdet i variabeln mittVal.
@@ -16,7 +16,6 @@ function Spela() {
       VinstForlustUtskrift(raknaForlost, raknaVinst);  //Se funktionen nedan.
       return;  //Avslutar isåfall funktionen.
     }
-
 
     //Utfallen om de ej är lika, det är sex stycken, behandlas i switchen. Den innehåller utskrifter, samt uppräkning av vinst och förlust variablerna. Variablerna sparas undan i deras respektive localStorage. För att beskåda funktionerna som finns i switchen- se nedan.
     switch (mittVal) { 
