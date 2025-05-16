@@ -2,7 +2,7 @@
 let raknaVinst = 0;
 let raknaForlost = 0;
 
-function Spela() { //Huvudfunktion. De funktioner som används i den är definierade nedanför.
+function spela() { //Huvudfunktion. De funktioner som används i den är definierade nedanför.
 
     //Läser in angivet val i variabeln val.
     let val = "";
@@ -16,68 +16,68 @@ function Spela() { //Huvudfunktion. De funktioner som används i den är definie
       val = "påse";
     }
 
-    RensaResultatUtskrift(); //Tar bort resultatutskriften. Behövs då man kör mer än en gång.
+    rensaResultatUtskrift(); //Tar bort resultatutskriften. Behövs då man kör mer än en gång.
     
     document.getElementById("resetId").style.display="block"; //Visar reset-knppen om den är dold, som efter uppstart och efter reset.
 
-    let datorVal = SlumpVal(); //Skapar datorvalet.
+    let datorVal = slumpVal(); //Skapar datorvalet.
 
     if (val == datorVal) { //Behandlar utfallet att bägge val är lika.
       document.getElementById("grattisSorryStorId").innerHTML="Det blev oavgjort";
       document.getElementById("utskriftHalvStorId").innerHTML="Datorn valde också " + val + ".";
       document.getElementById(val +"Id").style.display="block";
-      VinstForlustUtskrift(); //Se funktionen nedan.
+      vinstForlustUtskrift(); //Se funktionen nedan.
       return; //Avslutar isåfall funktionen.
     }
 
-     //Utfallen om de ej är lika, det är sex stycken, behandlas i switchen. Den innehåller utskrift på resultat sidan, samt uppräkning av vinst och förlust variablerna. För att beskåda funktionerna som finns i switchen- se nedan.
+     //Utfallen om de ej är lika, det är sex stycken, behandlas i switchen. Den innehåller utskrift på resultat sidan, samt uppräkning av vinst och förlust variablerna. För att beskåda funktionerna som finns i switchen - se nedan.
     switch (val) {
       case "sten":
         if (datorVal== "påse") {
-          Sorry(datorVal);
+          sorry(datorVal);
           document.getElementById("utskriftId").innerHTML="Stenen omslutes av påsen.";
           document.getElementById("paseStenId").style.display="block";
           raknaForlost ++;
         }
         else {
-          Grattis(datorVal);
+          grattis(datorVal);
           document.getElementById("utskriftId").innerHTML="Stenen förstör saxen.";
           document.getElementById("saxStenId").style.display="block";
           raknaVinst ++;
         }
-        VinstForlustUtskrift();
+        vinstForlustUtskrift();
         break;
     
      case "sax":
         if (datorVal== "påse") {
-          Grattis(datorVal);
+          grattis(datorVal);
           document.getElementById("utskriftId").innerHTML="Saxen klipper sönder påsen.";
           document.getElementById("saxPaseId").style.display="block";
           raknaVinst ++;
         }
         else {
-          Sorry(datorVal);
+          sorry(datorVal);
           document.getElementById("utskriftId").innerHTML="Saxen förstörs av stenen.";
           document.getElementById("saxStenId").style.display="block";
           raknaForlost ++;
         }
-        VinstForlustUtskrift();
+        vinstForlustUtskrift();
         break;
 
     case "påse": 
         if (datorVal== "sax") {
-          Sorry(datorVal);
+          sorry(datorVal);
           document.getElementById("utskriftId").innerHTML="Påsen klipps sönder av saxen.";
           document.getElementById("saxPaseId").style.display="block";
           raknaForlost ++;
         }
         else {
-          Grattis(datorVal);
+          grattis(datorVal);
           document.getElementById("utskriftId").innerHTML="Påsen omsluter stenen.";
           document.getElementById("paseStenId").style.display="block";
           raknaVinst ++;
         }
-        VinstForlustUtskrift();
+        vinstForlustUtskrift();
         break;
     default: { //Sker om inget är valt.
           document.getElementById("utskriftHalvStorId").innerHTML="<br>Du får välja något!";
@@ -87,17 +87,17 @@ function Spela() { //Huvudfunktion. De funktioner som används i den är definie
     }
 }
 
-function Sorry(datorVal) { //Utskrift. Datorval skickas med då det är definierat i funktionen Spela().
+function sorry(datorVal) { //Utskrift. Datorval skickas med då det är definierat i funktionen spela().
     document.getElementById("grattisSorryStorId").innerHTML="Sorry!"
     document.getElementById("utskriftHalvStorId").innerHTML="Datorn valde " + datorVal + ".";
 }
 
-function Grattis(datorVal) { //Utskrift Datorval skickas med då det är definierat i funktionen Spela().
+function grattis(datorVal) { //Utskrift Datorval skickas med då det är definierat i funktionen spela().
     document.getElementById("grattisSorryStorId").innerHTML="Grattis!"
     document.getElementById("utskriftHalvStorId").innerHTML="Datorn valde " + datorVal + ".";
 }
 
-function VinstForlustUtskrift() { //Utskrifts funktion som även räknar ut om du leder eller ligger under. Variablerna som används är "globala".
+function vinstForlustUtskrift() { //Utskrifts funktion som även räknar ut om du leder eller ligger under. Variablerna som används är "globala".
     if (raknaVinst==raknaForlost) document.getElementById("summeringId").innerHTML="Det är lika mellan er!<br><br>Antalet vinster: " + raknaVinst + "<br>Antalet förluster: " + raknaForlost;
 
     if (raknaVinst>raknaForlost) document.getElementById("summeringId").innerHTML="Du leder!<br><br>Antalet vinster: " + raknaVinst + "<br>Antalet förluster: " + raknaForlost;
@@ -107,7 +107,7 @@ function VinstForlustUtskrift() { //Utskrifts funktion som även räknar ut om d
     document.getElementById("spelaId").innerHTML="Spela igen?"; //Byrer texten ovan formuläret.
 }
    
-function SlumpVal() {
+function slumpVal() {
     let slump =  Math.floor(Math.random()*3); //Slumpgeneratorn "Math.random" genererar tal från 0 upp till 1 (inte till och med 1). "floor" avrundar nedåt till närmaste heltal. Denna uträkning ger alltså ett tal med värdet 0, 1 eller 2.
 
     //returnerar slump-valet.
@@ -122,7 +122,7 @@ function SlumpVal() {
     }
 }
 
-function RensaResultatUtskrift() { //Tar bort resultatutskriften.
+function rensaResultatUtskrift() { //Tar bort resultatutskriften.
     document.getElementById("grattisSorryStorId").innerHTML="";
     document.getElementById("utskriftHalvStorId").innerHTML="";
     document.getElementById("utskriftId").innerHTML="";
@@ -135,7 +135,7 @@ function RensaResultatUtskrift() { //Tar bort resultatutskriften.
     document.getElementById("stenId").style.display="none";
 }
 
-function Reset() {
+function reset() {
   //Nollställer radioknapparna:
     document.getElementById("sten").checked=false;
     document.getElementById("sax").checked=false;
@@ -151,5 +151,5 @@ function Reset() {
     raknaVinst = 0;
     raknaForlost = 0;
 
-    RensaResultatUtskrift(); //Tar bort resultatutskriften.
+    rensaResultatUtskrift(); //Tar bort resultatutskriften.
 }
